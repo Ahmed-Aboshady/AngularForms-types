@@ -1,0 +1,57 @@
+<div class="container-form">
+    <h2 class="form-title">
+        Reactive Driven Form
+    </h2>
+    <form #f="ngForm" [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="name">
+        <i class="material-icons">account_circle</i>
+      </label>
+            <input formControlName="userName" type="text" name="name" placeholder="Your Name">
+            <div *ngIf="f.submitted && reactiveForm.controls.userName.invalid" class="error-feedback">
+                <p *ngIf="reactiveForm.controls.userName.errors.required">First Name is required</p>
+                <p *ngIf="reactiveForm.controls.userName.errors.minlength">First Name minimum length Should be 5 TO 10</p>
+            </div>
+        </div>
+        <!-- -->
+        <div class="form-group">
+            <label for="email">
+                <i class="material-icons">email</i>
+               </label>
+            <input formControlName="email" type="text" name="email" placeholder="Email">
+            <div *ngIf="f.submitted && reactiveForm.controls.email.invalid && reactiveForm.controls.email.touched" class="error-feedback">
+                <p *ngIf="reactiveForm.controls.email.errors.required">email Number is required</p>
+                <p *ngIf="reactiveForm.controls.email.errors.email">email is error</p>
+                <p *ngIf="reactiveForm.controls.email.errors.forbidden">
+                    This Name is a forbidden name</p>
+
+            </div>
+        </div>
+        <!--  -->
+        <div class="form-group">
+            <label for="password">
+        <i class="material-icons">security</i>
+      </label>
+            <input formControlName="password" type="password" name="password" placeholder="Password">
+            <div *ngIf="f.submitted && reactiveForm.controls.password.invalid" class="error-feedback">
+                <p *ngIf="reactiveForm.controls.password.errors.required">password is required</p>
+            </div>
+
+        </div>
+        <!--  -->
+        <div class="form-group">
+            <label for="phone">
+        <i class="material-icons">phone</i>
+      </label>
+            <input formControlName="phoneNumber" type="text" name="phone" placeholder="Phone Number">
+            <div *ngIf="f.submitted && reactiveForm.controls.phoneNumber.invalid" class="error-feedback">
+                <p *ngIf="reactiveForm.controls.phoneNumber.errors.required">Photo Number is required</p>
+                <p *ngIf="reactiveForm.controls.phoneNumber.errors.minlength">Photo Number minimum length Should be 11</p>
+
+            </div>
+        </div>
+        <!--  -->
+        <button type="submit" class="submit">Submit</button>
+
+    </form>
+</div>

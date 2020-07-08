@@ -1,0 +1,8 @@
+label {
+  position: absolute;
+  bottom: unset;
+}
+
+input.is-invalid {
+  border-bottom-color: red;
+}

@@ -1,0 +1,38 @@
+<div class="container-form">
+    <h2 class="form-title">
+        Basic Form
+    </h2>
+    <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+        <div class="form-group">
+            <label for="name">
+        <i class="material-icons">account_circle</i>
+      </label>
+            <input [(ngModel)]="userName" type="text" name="name" placeholder="Your Name">
+        </div>
+        <!--  -->
+        <div class="form-group">
+            <label for="email">
+        <i class="material-icons">email</i>
+      </label>
+            <input [(ngModel)]="email" type="text" name="email" placeholder="Email">
+        </div>
+        <!--  -->
+        <div class="form-group">
+            <label for="password">
+        <i class="material-icons">security</i>
+      </label>
+            <input [(ngModel)]="password" type="password" name="password" placeholder="Password">
+        </div>
+        <!--  -->
+        <div class="form-group">
+            <label for="phone">
+        <i class="material-icons">phone</i>
+      </label>
+            <input [(ngModel)]="phoneNumber" type="text" name="phone" placeholder="Phone Number">
+        </div>
+        <!--  -->
+        <button type="submit" class="submit">Submit</button>
+
+        <!-- <p class="error-p" *ngIf="errorMessage.length">{{errorMessage}}</p>-->
+    </form>
+</div>

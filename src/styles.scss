@@ -1,0 +1,61 @@
+body {
+  background: #f8f8f8;
+}
+
+.form-title {
+  font-family: Poppins;
+  font-weight: 700;
+  font-size: 42px;
+}
+
+.form-group {
+  margin-bottom: 25px;
+  position: relative;
+}
+
+input {
+  transition: 0.3s all linear;
+  font-size: 0.9em;
+  width: 100%;
+  display: block;
+  border: none;
+  border-bottom: 1px solid #999;
+  padding: 6px 30px;
+  font-family: Poppins;
+  box-sizing: border-box;
+  outline: none;
+}
+
+button.submit {
+  display: inline-block;
+  background: #6dabe4;
+  color: #fff;
+  border-bottom: none;
+  width: auto;
+  padding: 15px 39px;
+  border-radius: 5px;
+  margin-top: 25px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+label {
+  position: absolute;
+  opacity: 0.5;
+  bottom: 12%;
+}
+
+i {
+  font-size: 21px;
+}
+
+.error-p {
+  font-weight: 500;
+}
+
+.error-p,
+.error-feedback {
+  color: red;
+  font-family: Poppins;
+}
